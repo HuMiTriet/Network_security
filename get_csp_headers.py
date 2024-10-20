@@ -46,8 +46,3 @@ with open(output_csv_file, 'w', newline='', encoding='utf-8') as outfile:
     writer.writeheader()
     for result in results:
         writer.writerow(result)
-
-
-
-# pie chart
-# top csp header
