@@ -1,14 +1,15 @@
 import csv
 import pprint
+import os
 
-
-input_file = "top_websites.csv"
-output_file = "top_websites_rem_dup.csv"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+input_csv_file = os.path.join(script_dir, 'top_websites.csv')
+output_csv_file = os.path.join(script_dir, "top_websites_rem_dup.csv")
 
 domain_to_row: dict[str, list[str]] = dict()
 
-with open(input_file, mode="r", newline="", encoding="utf-8") as infile, open(
-    output_file, mode="w", newline="", encoding="utf-8"
+with open(input_csv_file, mode="r", newline="", encoding="utf-8") as infile, open(
+    output_csv_file, mode="w", newline="", encoding="utf-8"
 ) as outfile:
 
     reader = csv.reader(infile)

@@ -7,7 +7,7 @@ import validators
 warnings.filterwarnings('ignore', message='Unverified HTTPS request')
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-input_csv_file = os.path.join(script_dir, 'top_websites.csv')
+input_csv_file = os.path.join(script_dir, 'top_websites_rem_dup.csv')
 output_csv_file = os.path.join(script_dir, 'csp_results.csv')
 
 results = []

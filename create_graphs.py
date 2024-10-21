@@ -53,7 +53,7 @@ def create_csp_count_pie_chart():
 
     plt.figure(figsize=(10, 8))
     plt.pie(sizes_filtered, labels=labels_filtered, autopct='%1.1f%%', startangle=140)
-    plt.title('CSP Directive Usage')
+    plt.title('CSP Directive Usage', y=1.08)
     plt.axis('equal')  
 
     plt.tight_layout()
@@ -92,7 +92,7 @@ def create_csp_usage_pie_chart():
     plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140,
             colors=colors, explode=explode, shadow=True)
 
-    plt.title('Percentage of Websites Using CSP Headers')
+    plt.title('Percentage of Websites Using CSP Headers', y=1.08)
     plt.axis('equal')  
     plt.tight_layout()
     plt.show()
@@ -161,7 +161,7 @@ def create_csp_params_pie_chart():
 
     plt.figure(figsize=(10, 8))
     plt.pie(proportions, labels=labels, autopct='%1.1f%%', startangle=140)
-    plt.title('CSP Feature Usage Among Websites with CSP Headers')
+    plt.title('CSP Feature Usage Among Websites with CSP Headers', y=1.08)
     plt.axis('equal') 
 
     plt.tight_layout()
@@ -171,6 +171,6 @@ def create_csp_params_pie_chart():
 
 
 if __name__ == "__main__":
-    # create_csp_count_pie_chart()
-    # create_csp_usage_pie_chart()
+    create_csp_count_pie_chart()
+    create_csp_usage_pie_chart()
     create_csp_params_pie_chart()
